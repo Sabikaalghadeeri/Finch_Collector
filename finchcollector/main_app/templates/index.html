@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> finch Details </h1>
+
+    {% for finch in finchs %}
+
+    <div class="card">
+    {% comment %} <a href="/finchs/{{ finch.id }}"> {% endcomment %}
+        <a href = "{% url 'detail' finch.id %}"
+            <div class="card-content">
+                <span class="card-title">{{ finch.scientific_name }}</span>
+                <p>Bird Family: {{ finch.bird_family }}</p>
+                <p>What they eat: {{ finch.food }}</p>
+                <p>Key Information: {{ finch.key_information }}</p>
+                {% if finch.weight > 0 %}
+                  <p>Weight: {{ finch.weight }}</p>
+                {% else %}
+                  <p>Weight: Little Finchs</p>
+                {% endif %}
+            </div>
+    <!-- and this following one as well -->
+        </a>
+    </div>
