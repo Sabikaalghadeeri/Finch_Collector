@@ -13,6 +13,7 @@ class Finch(models.Model):
     food = models.CharField(max_length=100)
     key_information = models.TextField(max_length=250)
     weight = models.IntegerField()
+    img = models.TextField(max_length=250)
     
     def __str__(self):
         return self.scientific_name

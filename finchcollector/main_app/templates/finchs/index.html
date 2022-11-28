@@ -8,6 +8,7 @@
   <a href = "{% url 'detail' finch.id %}">
     <div class="card-content">
         <span class="card-title">{{ finch.scientific_name }}</span>
+      <img src=" {{ finch.img}} " />
       <p>Bird Family: {{ finch.bird_family }}</p>
       <p>Key Information: {{ finch.key_information }}</p>
       {% if finch.weight > 0 %}

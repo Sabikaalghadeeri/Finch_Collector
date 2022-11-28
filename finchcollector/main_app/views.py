@@ -18,7 +18,8 @@ def add_feeding(request, finch_id):
 
 class FinchUpdate(UpdateView):
   model = Finch
-  fields = ['breed','description', 'age']
+  fields = '__all__'
+  success_url = '/finchs/'
   
   
 class FinchDelete(DeleteView):
